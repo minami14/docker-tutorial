@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+        web1:
+                build: ./web1
+                expose:
+                        - "9001"
+        web2:
+                build: ./web2
+                expose:
+                        - "9002"
+        proxy:
+                build: ./nginx
+                ports:
+                        - "80:80"
